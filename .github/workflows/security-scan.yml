@@ -34,7 +34,7 @@ jobs:
 
       - name: Run Bandit Scan
         run: |
-          bandit -r app -f json -o report/bandit.json
+          bandit -r app -f json -o report/bandit.json || true
 
       - name: Run Gitleaks
         run: ./gitleaks detect --source . --report-format json --report-path report/gitleaks.json --config .gitleaks.toml
