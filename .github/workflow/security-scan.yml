@@ -2,7 +2,11 @@ name: Security Dashboard CI
 
 on:
   push:
-    branches: [fix]
+    branches:
+      - fix
+  pull_request:
+    branches:
+      - fix
 
 jobs:
   scan:
