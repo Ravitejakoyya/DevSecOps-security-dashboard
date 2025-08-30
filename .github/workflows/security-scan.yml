@@ -37,13 +37,14 @@ jobs:
           sudo mv gitleaks /usr/local/bin/
 
       - name: Run Gitleaks
-        run: |
-          gitleaks detect --source . \
-            --report-format json \
-            --report-path report/gitleaks.json \
-            --config .gitleaks.toml
+        uses: gitleaks/gitleaks-action@v2
+        with:
+          args: detect --source . \
+                      --report-format json \
+                      --report-path report/gitleaks.json \
+                      --config .gitleaks.toml
 
-
+                      
       - name: Run Trivy (File scan)
         run: trivy fs . --format json --output report/trivy.json
 
