@@ -44,12 +44,12 @@ jobs:
                       --report-path report/gitleaks.json \
                       --config .gitleaks.toml
 
-                      
+
       - name: Run Trivy (File scan)
         run: trivy fs . --format json --output report/trivy.json
 
       - name: Generate HTML Dashboard
-        run: python3 generate_dashboard.py
+        run: python3 report/generate_dashboard.py
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
