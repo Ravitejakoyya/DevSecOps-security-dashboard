@@ -27,8 +27,14 @@ jobs:
         run: |
           curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sudo sh -s -- -b /usr/local/bin
 
-      - name: Run Bandit
-        run: bandit -r app -f json -o report/bandit.json
+      - name: Install Bandit
+        run: |
+          pip install --user bandit
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      - name: Run Bandit Scan
+        run: |
+          bandit -r app -f json -o report/bandit.json
 
       - name: Run Gitleaks
         run: ./gitleaks detect --source . --report-format json --report-path report/gitleaks.json --config .gitleaks.toml
