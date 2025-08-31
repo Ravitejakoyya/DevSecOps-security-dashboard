@@ -2,7 +2,7 @@ name: Security Dashboard CI
 
 on:
   push:
-    branches: [main]
+    branches: [need-fix-metrics]
   pull_request:
     branches: [main]
 
