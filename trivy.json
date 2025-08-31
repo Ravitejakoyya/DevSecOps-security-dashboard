@@ -1,12 +1,12 @@
 {
   "SchemaVersion": 2,
-  "CreatedAt": "2025-08-31T07:16:30.418640482Z",
+  "CreatedAt": "2025-08-31T07:21:41.572851747Z",
   "ArtifactName": ".",
   "ArtifactType": "filesystem",
   "Metadata": {
     "RepoURL": "https://github.com/Ravitejakoyya/DevSecOps-security-dashboard",
     "Branch": "main",
-    "Commit": "48660ae386c1efd3a587fb416e7eda85907a51b2",
+    "Commit": "ce40d62eed0503017d5f8f6461937f0ed12e19b5",
     "CommitMsg": "Folder structure changed",
     "Author": "Raviteja Reddy \u003cravitejakoyya651@gmail.com\u003e",
     "Committer": "Raviteja Reddy \u003cravitejakoyya651@gmail.com\u003e"
