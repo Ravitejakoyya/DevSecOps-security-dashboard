@@ -1,13 +1,13 @@
 {
   "SchemaVersion": 2,
-  "CreatedAt": "2025-08-31T07:03:16.216977755Z",
+  "CreatedAt": "2025-08-31T07:16:30.418640482Z",
   "ArtifactName": ".",
   "ArtifactType": "filesystem",
   "Metadata": {
     "RepoURL": "https://github.com/Ravitejakoyya/DevSecOps-security-dashboard",
     "Branch": "main",
-    "Commit": "83c0e19e4a2d91a7d8ebfba119b39cce9d89d187",
-    "CommitMsg": "Updated - Config Retentionperiod added",
+    "Commit": "48660ae386c1efd3a587fb416e7eda85907a51b2",
+    "CommitMsg": "Folder structure changed",
     "Author": "Raviteja Reddy \u003cravitejakoyya651@gmail.com\u003e",
     "Committer": "Raviteja Reddy \u003cravitejakoyya651@gmail.com\u003e"
   }
