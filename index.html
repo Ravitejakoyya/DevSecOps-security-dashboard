@@ -1,130 +1,51 @@
 
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Security Dashboard</title>
-  <style>
-    body { font-family: sans-serif; padding: 2rem; }
-    h1 { color: #333; }
-    pre { background: #f4f4f4; padding: 1rem; border-radius: 8px; overflow-x: auto; }
-  </style>
+    <title>DevSecOps Security Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        h1 { color: #333; }
+        .section { margin-bottom: 3em; }
+        table {
+            border-collapse: collapse;
+            width: 60%;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ccc;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-<h1>🔐 Security Scan Results</h1>
+<h1>🔐 DevSecOps Security Dashboard</h1>
 
-<h2>🐍 Bandit</h2>
-<pre>{
-  "errors": [],
-  "generated_at": "2025-08-31T07:44:30Z",
-  "metrics": {
-    "_totals": {
-      "CONFIDENCE.HIGH": 2,
-      "CONFIDENCE.LOW": 0,
-      "CONFIDENCE.MEDIUM": 1,
-      "CONFIDENCE.UNDEFINED": 0,
-      "SEVERITY.HIGH": 2,
-      "SEVERITY.LOW": 1,
-      "SEVERITY.MEDIUM": 0,
-      "SEVERITY.UNDEFINED": 0,
-      "loc": 11,
-      "nosec": 0,
-      "skipped_tests": 0
-    },
-    "app/main.py": {
-      "CONFIDENCE.HIGH": 2,
-      "CONFIDENCE.LOW": 0,
-      "CONFIDENCE.MEDIUM": 1,
-      "CONFIDENCE.UNDEFINED": 0,
-      "SEVERITY.HIGH": 2,
-      "SEVERITY.LOW": 1,
-      "SEVERITY.MEDIUM": 0,
-      "SEVERITY.UNDEFINED": 0,
-      "loc": 11,
-      "nosec": 0,
-      "skipped_tests": 0
-    }
-  },
-  "results": [
-    {
-      "code": "1 import os\n2 import subprocess\n3 from flask import Flask, request\n",
-      "col_offset": 0,
-      "end_col_offset": 17,
-      "filename": "app/main.py",
-      "issue_confidence": "HIGH",
-      "issue_cwe": {
-        "id": 78,
-        "link": "https://cwe.mitre.org/data/definitions/78.html"
-      },
-      "issue_severity": "LOW",
-      "issue_text": "Consider possible security implications associated with the subprocess module.",
-      "line_number": 2,
-      "line_range": [
-        2
-      ],
-      "more_info": "https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_imports.html#b404-import-subprocess",
-      "test_id": "B404",
-      "test_name": "blacklist"
-    },
-    {
-      "code": "9     cmd = request.json.get(\"cmd\")\n10     output = subprocess.check_output(cmd, shell=True)\n11     return {\"output\": output.decode()}\n",
-      "col_offset": 13,
-      "end_col_offset": 53,
-      "filename": "app/main.py",
-      "issue_confidence": "HIGH",
-      "issue_cwe": {
-        "id": 78,
-        "link": "https://cwe.mitre.org/data/definitions/78.html"
-      },
-      "issue_severity": "HIGH",
-      "issue_text": "subprocess call with shell=True identified, security issue.",
-      "line_number": 10,
-      "line_range": [
-        10
-      ],
-      "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b602_subprocess_popen_with_shell_equals_true.html",
-      "test_id": "B602",
-      "test_name": "subprocess_popen_with_shell_equals_true"
-    },
-    {
-      "code": "13 if __name__ == \"__main__\":\n14     app.run(debug=True)\n",
-      "col_offset": 4,
-      "end_col_offset": 23,
-      "filename": "app/main.py",
-      "issue_confidence": "MEDIUM",
-      "issue_cwe": {
-        "id": 94,
-        "link": "https://cwe.mitre.org/data/definitions/94.html"
-      },
-      "issue_severity": "HIGH",
-      "issue_text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
-      "line_number": 14,
-      "line_range": [
-        14
-      ],
-      "more_info": "https://bandit.readthedocs.io/en/1.8.6/plugins/b201_flask_debug_true.html",
-      "test_id": "B201",
-      "test_name": "flask_debug_true"
-    }
-  ]
-}</pre>
+<div class="section">
+    <h2>📦 Bandit (Python Code Scan)</h2>
+    <p>Total Issues: <strong>3</strong></p>
+    <table>
+        <tr><th>Severity</th><th>Count</th></tr>
+        <tr><td>LOW</td><td>1</td></tr><tr><td>HIGH</td><td>2</td></tr>
+    </table>
+</div>
 
-<h2>🔑 Gitleaks</h2>
-<pre>[]</pre>
+<div class="section">
+    <h2>🛡️ Trivy (File Vulnerabilities)</h2>
+    <p>Total Issues: <strong>0</strong></p>
+    <table>
+        <tr><th>Severity</th><th>Count</th></tr>
+        
+    </table>
+</div>
 
-<h2>📦 Trivy</h2>
-<pre>{
-  "SchemaVersion": 2,
-  "CreatedAt": "2025-08-31T07:44:35.447673447Z",
-  "ArtifactName": ".",
-  "ArtifactType": "filesystem",
-  "Metadata": {
-    "RepoURL": "https://github.com/Ravitejakoyya/DevSecOps-security-dashboard",
-    "Branch": "main",
-    "Commit": "3ea95625b421677221d7db695846a7110341d067",
-    "CommitMsg": "END-TO-END Project explanation",
-    "Author": "Raviteja Reddy <ravitejakoyya651@gmail.com>",
-    "Committer": "Raviteja Reddy <ravitejakoyya651@gmail.com>"
-  }
-}</pre>
+<div class="section">
+    <h2>🔑 Gitleaks (Secrets Detection)</h2>
+    <p>Total Secrets Found: <strong>0</strong></p>
+</div>
 
 </body>
 </html>
