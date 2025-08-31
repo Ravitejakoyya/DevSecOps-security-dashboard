@@ -3,10 +3,10 @@ name: Security Dashboard CI
 on:
   push:
     branches:
-      - fix
+      - main
   pull_request:
     branches:
-      - fix
+      - main
 
 permissions:
  contents: write 
