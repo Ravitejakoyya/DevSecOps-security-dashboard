@@ -8,6 +8,9 @@ on:
     branches:
       - fix
 
+permissions:
+ contents: write 
+
 jobs:
   scan:
     name: Run Security Scans and Publish Dashboard
