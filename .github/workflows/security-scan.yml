@@ -47,8 +47,7 @@ jobs:
           args: detect --redact \
                       --report-format sarif \
                       --report-path results.sarif
-
-
+          retention-days: 1              
 
       - name: Run Trivy (File scan)
         run: trivy fs . --format json --output report/trivy.json
