@@ -1,12 +1,13 @@
 {
   "SchemaVersion": 2,
-  "CreatedAt": "2025-08-31T08:03:29.0936754Z",
+  "CreatedAt": "2025-08-31T08:03:59.837581166Z",
   "ArtifactName": ".",
   "ArtifactType": "filesystem",
   "Metadata": {
     "RepoURL": "https://github.com/Ravitejakoyya/DevSecOps-security-dashboard",
-    "Commit": "bf80806f9a675d187c22891c97de56858b64d1ef",
-    "CommitMsg": "Merge 247ea0dd0a4abfa1b4cd0b616dc17ef397b216d4 into cd85c3ac8b716ed2a94d6fdf1fc2437f3e1768e4",
+    "Branch": "main",
+    "Commit": "2c177ef36c61a6c5457ee61da69787f3d64e4274",
+    "CommitMsg": "Merge pull request #6 from Ravitejakoyya/need-fix-metrics\n\nNeed fix metrics",
     "Author": "Raviteja Reddy \u003cravitejakoyya651@gmail.com\u003e",
     "Committer": "GitHub \u003cnoreply@github.com\u003e"
   }
