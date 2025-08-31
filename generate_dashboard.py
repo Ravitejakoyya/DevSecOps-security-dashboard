@@ -39,4 +39,4 @@ html = f"""
 </html>
 """
 
-Path("report/index.html").write_text(html)
+Path("report/index.html").write_text(html, encoding="utf-8")
