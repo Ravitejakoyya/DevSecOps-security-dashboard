@@ -1,13 +1,12 @@
 {
   "SchemaVersion": 2,
-  "CreatedAt": "2025-08-31T07:59:03.631437482Z",
+  "CreatedAt": "2025-08-31T07:59:58.768816485Z",
   "ArtifactName": ".",
   "ArtifactType": "filesystem",
   "Metadata": {
     "RepoURL": "https://github.com/Ravitejakoyya/DevSecOps-security-dashboard",
-    "Branch": "need-fix-metrics",
-    "Commit": "eef7b034e2f6094fa41691befec972e3caa5c94d",
-    "CommitMsg": "HTML + JOSN Metrics Update to README.md",
+    "Commit": "19c8c7afaa21d29047ef4e31986f1ffa7fea04a8",
+    "CommitMsg": "Merge eef7b034e2f6094fa41691befec972e3caa5c94d into 3ea95625b421677221d7db695846a7110341d067",
     "Author": "Raviteja Reddy \u003cravitejakoyya651@gmail.com\u003e",
     "Committer": "GitHub \u003cnoreply@github.com\u003e"
   }
